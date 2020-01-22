@@ -1,0 +1,35 @@
+[apache-auth]
+
+enabled  = true
+port     = http,https
+filter   = apache-auth
+logpath  = /var/log/{{ pillar['fail2ban']['jails']['apache']['vhost'] }}/error.log
+maxretry 	= {{ pillar['fail2ban']['jails']['apache']['maxretry'] }}
+bantime 	= {{ pillar['fail2ban']['jails']['apache']['bantime'] }}
+
+[apache-overflows]
+
+enabled  = true
+port     = http,https
+filter   = apache-overflows
+logpath  = /var/log/{{ pillar['fail2ban']['jails']['apache']['vhost'] }}/error.log
+maxretry 	= {{ pillar['fail2ban']['jails']['apache']['maxretry'] }}
+bantime 	= {{ pillar['fail2ban']['jails']['apache']['bantime'] }}
+
+[apache-badbots]
+
+enabled  = true
+port     = http,https
+filter   = apache-badbots
+logpath  = /var/log/{{ pillar['fail2ban']['jails']['apache']['vhost'] }}/error.log
+maxretry 	= {{ pillar['fail2ban']['jails']['apache']['maxretry'] }}
+bantime 	= {{ pillar['fail2ban']['jails']['apache']['bantime'] }}
+
+[apache-nohome]
+
+enabled  = true
+port     = http,https
+filter   = apache-nohome
+logpath  = /var/log/{{ pillar['fail2ban']['jails']['apache']['vhost'] }}/error.log
+maxretry 	= {{ pillar['fail2ban']['jails']['apache']['maxretry'] }}
+bantime 	= {{ pillar['fail2ban']['jails']['apache']['bantime'] }}

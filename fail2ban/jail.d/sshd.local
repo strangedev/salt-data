@@ -1,0 +1,8 @@
+[sshd]
+
+mode		= aggressive
+port    	= ssh
+logpath 	= /var/log/auth.log
+backend 	= polling
+maxretry 	= {{ pillar['fail2ban']['jails']['sshd']['maxretry'] }}
+bantime 	= {{ pillar['fail2ban']['jails']['sshd']['bantime'] }}

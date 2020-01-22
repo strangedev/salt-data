@@ -1,0 +1,8 @@
+[wordpress-hard]
+
+enabled 	= true
+filter 		= wordpress-hard
+logpath 	= /var/log/auth.log
+maxretry 	= {{ pillar['fail2ban']['jails']['wordpress']['maxretry'] }}
+bantime 	= {{ pillar['fail2ban']['jails']['wordpress']['bantime'] }}
+port 		= http,https
